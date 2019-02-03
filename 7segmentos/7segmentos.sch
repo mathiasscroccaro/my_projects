@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:7segmentos-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -56,7 +57,7 @@ U 1 1 5C56E28F
 P 4500 2700
 F 0 "C6" H 4592 2746 50  0000 L CNN
 F 1 "100nF" H 4592 2655 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 4500 2700 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4500 2700 50  0001 C CNN
 F 3 "~" H 4500 2700 50  0001 C CNN
 	1    4500 2700
 	1    0    0    -1  
@@ -85,7 +86,7 @@ U 1 1 5C56E434
 P 3300 2700
 F 0 "C4" H 3392 2746 50  0000 L CNN
 F 1 "100nF" H 3392 2655 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 3300 2700 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 3300 2700 50  0001 C CNN
 F 3 "~" H 3300 2700 50  0001 C CNN
 	1    3300 2700
 	1    0    0    -1  
@@ -147,10 +148,8 @@ Wire Wire Line
 	2850 3050 2850 3300
 Wire Wire Line
 	2850 3300 3150 3300
-Text GLabel 2100 3300 0    50   Input ~ 0
+Text GLabel 1300 3100 0    50   Input ~ 0
 reset
-Wire Wire Line
-	2100 3300 2850 3300
 Connection ~ 2850 3300
 $Comp
 L Device:Crystal Y1
@@ -181,7 +180,7 @@ U 1 1 5C56F9B8
 P 1500 3500
 F 0 "C1" V 1271 3500 50  0000 C CNN
 F 1 "22pF" V 1362 3500 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 1500 3500 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 1500 3500 50  0001 C CNN
 F 3 "~" H 1500 3500 50  0001 C CNN
 	1    1500 3500
 	0    1    1    0   
@@ -195,7 +194,7 @@ U 1 1 5C56FE20
 P 1500 3900
 F 0 "C2" V 1271 3900 50  0000 C CNN
 F 1 "22pF" V 1362 3900 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 1500 3900 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 1500 3900 50  0001 C CNN
 F 3 "~" H 1500 3900 50  0001 C CNN
 	1    1500 3900
 	0    1    1    0   
@@ -231,7 +230,7 @@ U 1 1 5C570F3D
 P 2650 4050
 F 0 "C3" H 2742 4096 50  0000 L CNN
 F 1 "1uF" H 2742 4005 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 2650 4050 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2650 4050 50  0001 C CNN
 F 3 "~" H 2650 4050 50  0001 C CNN
 	1    2650 4050
 	1    0    0    -1  
@@ -256,13 +255,13 @@ Wire Wire Line
 $Comp
 L Transistor_Array:ULN2003 U3
 U 1 1 5C5720EA
-P 6000 4200
-F 0 "U3" H 6000 4867 50  0000 C CNN
-F 1 "ULN2003" H 6000 4776 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 6050 3650 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/uln2003a.pdf" H 6100 4000 50  0001 C CNN
-	1    6000 4200
-	1    0    0    -1  
+P 6000 4400
+F 0 "U3" H 6000 5067 50  0000 C CNN
+F 1 "ULN2003" H 6000 4976 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 6050 3850 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/uln2003a.pdf" H 6100 4200 50  0001 C CNN
+	1    6000 4400
+	1    0    0    1   
 $EndComp
 Text GLabel 4850 3700 2    50   Input ~ 0
 miso
@@ -287,24 +286,13 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2486-8-bit-avr-microc
 	1    3750 4400
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:AVR-ISP-6 J1
-U 1 1 5C579DD3
-P 1700 6650
-F 0 "J1" H 1420 6746 50  0000 R CNN
-F 1 "AVR-ISP-6" H 1420 6655 50  0000 R CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" V 1450 6700 50  0001 C CNN
-F 3 " ~" H 425 6100 50  0001 C CNN
-	1    1700 6650
-	-1   0    0    -1  
-$EndComp
-Text GLabel 1150 6450 0    50   Input ~ 0
+Text GLabel 1850 6450 0    50   Input ~ 0
 miso
-Text GLabel 1150 6550 0    50   Input ~ 0
+Text GLabel 1850 6550 0    50   Input ~ 0
 mosi
-Text GLabel 1150 6650 0    50   Input ~ 0
+Text GLabel 1850 6650 0    50   Input ~ 0
 sck
-Text GLabel 1150 6750 0    50   Input ~ 0
+Text GLabel 1850 6750 0    50   Input ~ 0
 reset
 $Comp
 L power:GND #PWR0107
@@ -329,17 +317,11 @@ F 3 "" H 1800 6050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1800 7150 1800 7050
+	2000 6750 1850 6750
 Wire Wire Line
-	1300 6750 1150 6750
+	1850 6650 2000 6650
 Wire Wire Line
-	1150 6650 1300 6650
-Wire Wire Line
-	1300 6550 1150 6550
-Wire Wire Line
-	1150 6450 1300 6450
-Wire Wire Line
-	1800 6150 1800 6050
+	2000 6550 1850 6550
 $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 5C5801BC
@@ -376,35 +358,18 @@ Wire Wire Line
 $Comp
 L power:+12V #PWR0109
 U 1 1 5C5895E0
-P 6600 3600
-F 0 "#PWR0109" H 6600 3450 50  0001 C CNN
-F 1 "+12V" H 6615 3773 50  0000 C CNN
-F 2 "" H 6600 3600 50  0001 C CNN
-F 3 "" H 6600 3600 50  0001 C CNN
-	1    6600 3600
-	1    0    0    -1  
+P 6650 4800
+F 0 "#PWR0109" H 6650 4650 50  0001 C CNN
+F 1 "+12V" H 6665 4973 50  0000 C CNN
+F 2 "" H 6650 4800 50  0001 C CNN
+F 3 "" H 6650 4800 50  0001 C CNN
+	1    6650 4800
+	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6600 3600 6600 3800
-Wire Wire Line
-	6600 3800 6400 3800
 Wire Wire Line
 	6400 4000 7200 4000
 Wire Wire Line
 	7200 4000 7200 3650
-$Comp
-L power:GND #PWR0110
-U 1 1 5C593252
-P 6000 4900
-F 0 "#PWR0110" H 6000 4650 50  0001 C CNN
-F 1 "GND" H 6005 4727 50  0000 C CNN
-F 2 "" H 6000 4900 50  0001 C CNN
-F 3 "" H 6000 4900 50  0001 C CNN
-	1    6000 4900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 4900 6000 4800
 $Comp
 L Device:R R2
 U 1 1 5C594A04
@@ -544,7 +509,7 @@ Text GLabel 7700 2450 1    50   Input ~ 0
 f
 Text GLabel 7800 2450 1    50   Input ~ 0
 g
-Text GLabel 7850 1050 1    50   Input ~ 0
+Text GLabel 7050 1050 1    50   Input ~ 0
 1
 Wire Wire Line
 	7800 2450 7800 2700
@@ -577,12 +542,12 @@ g
 $Comp
 L Connector_Generic:Conn_01x08 J4
 U 1 1 5C5C2329
-P 7550 1400
-F 0 "J4" V 7674 1346 50  0000 C CNN
-F 1 "digito_1" V 7765 1346 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 7550 1400 50  0001 C CNN
-F 3 "~" H 7550 1400 50  0001 C CNN
-	1    7550 1400
+P 7450 1400
+F 0 "J4" V 7574 1346 50  0000 C CNN
+F 1 "digito_1" V 7665 1346 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 7450 1400 50  0001 C CNN
+F 3 "~" H 7450 1400 50  0001 C CNN
+	1    7450 1400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -600,8 +565,8 @@ Wire Wire Line
 Wire Wire Line
 	7750 1200 7750 1050
 Wire Wire Line
-	7850 1200 7850 1050
-Text GLabel 8750 1050 1    50   Input ~ 0
+	7050 1200 7050 1050
+Text GLabel 7950 1050 1    50   Input ~ 0
 2
 Text GLabel 8050 1050 1    50   Input ~ 0
 a
@@ -620,12 +585,12 @@ g
 $Comp
 L Connector_Generic:Conn_01x08 J5
 U 1 1 5C5D61BC
-P 8450 1400
-F 0 "J5" V 8574 1346 50  0000 C CNN
-F 1 "digito_2" V 8665 1346 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 8450 1400 50  0001 C CNN
-F 3 "~" H 8450 1400 50  0001 C CNN
-	1    8450 1400
+P 8350 1400
+F 0 "J5" V 8474 1346 50  0000 C CNN
+F 1 "digito_2" V 8565 1346 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 8350 1400 50  0001 C CNN
+F 3 "~" H 8350 1400 50  0001 C CNN
+	1    8350 1400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -643,8 +608,8 @@ Wire Wire Line
 Wire Wire Line
 	8650 1200 8650 1050
 Wire Wire Line
-	8750 1200 8750 1050
-Text GLabel 9650 1050 1    50   Input ~ 0
+	7950 1200 7950 1050
+Text GLabel 8850 1050 1    50   Input ~ 0
 3
 Text GLabel 8950 1050 1    50   Input ~ 0
 a
@@ -663,12 +628,12 @@ g
 $Comp
 L Connector_Generic:Conn_01x08 J6
 U 1 1 5C5D8ECD
-P 9350 1400
-F 0 "J6" V 9474 1346 50  0000 C CNN
-F 1 "digito_3" V 9565 1346 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 9350 1400 50  0001 C CNN
-F 3 "~" H 9350 1400 50  0001 C CNN
-	1    9350 1400
+P 9250 1400
+F 0 "J6" V 9374 1346 50  0000 C CNN
+F 1 "digito_3" V 9465 1346 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 9250 1400 50  0001 C CNN
+F 3 "~" H 9250 1400 50  0001 C CNN
+	1    9250 1400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -686,8 +651,8 @@ Wire Wire Line
 Wire Wire Line
 	9550 1200 9550 1050
 Wire Wire Line
-	9650 1200 9650 1050
-Text GLabel 10550 1050 1    50   Input ~ 0
+	8850 1200 8850 1050
+Text GLabel 9750 1050 1    50   Input ~ 0
 4
 Text GLabel 9850 1050 1    50   Input ~ 0
 a
@@ -706,12 +671,12 @@ g
 $Comp
 L Connector_Generic:Conn_01x08 J7
 U 1 1 5C5DF2DC
-P 10250 1400
-F 0 "J7" V 10374 1346 50  0000 C CNN
-F 1 "digito_4" V 10465 1346 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 10250 1400 50  0001 C CNN
-F 3 "~" H 10250 1400 50  0001 C CNN
-	1    10250 1400
+P 10150 1400
+F 0 "J7" V 10274 1346 50  0000 C CNN
+F 1 "digito_4" V 10365 1346 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 10150 1400 50  0001 C CNN
+F 3 "~" H 10150 1400 50  0001 C CNN
+	1    10150 1400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -729,7 +694,7 @@ Wire Wire Line
 Wire Wire Line
 	10450 1200 10450 1050
 Wire Wire Line
-	10550 1200 10550 1050
+	9750 1200 9750 1050
 $Comp
 L Transistor_FET:Si2319CDS Q1
 U 1 1 5C5E781C
@@ -859,21 +824,17 @@ Text GLabel 9300 5600 1    50   Input ~ 0
 Wire Wire Line
 	9300 5750 9300 5600
 Text GLabel 4800 5300 2    50   Input ~ 0
-g1
-Text GLabel 4800 5400 2    50   Input ~ 0
-g2
-Text GLabel 4850 3300 2    50   Input ~ 0
-g3
-Text GLabel 4850 3400 2    50   Input ~ 0
 g4
+Text GLabel 4800 5400 2    50   Input ~ 0
+g3
+Text GLabel 4850 3300 2    50   Input ~ 0
+g2
+Text GLabel 4850 3400 2    50   Input ~ 0
+g1
 Wire Wire Line
 	4850 3300 4350 3300
 Wire Wire Line
 	4350 3400 4850 3400
-Wire Wire Line
-	4800 5300 4350 5300
-Wire Wire Line
-	4350 5400 4800 5400
 $Comp
 L Regulator_Linear:LM7805_TO220 U2
 U 1 1 5C664B90
@@ -891,7 +852,7 @@ U 1 1 5C664D7E
 P 4900 6950
 F 0 "C7" H 4992 6996 50  0000 L CNN
 F 1 "100nF" H 4992 6905 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 4900 6950 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4900 6950 50  0001 C CNN
 F 3 "~" H 4900 6950 50  0001 C CNN
 	1    4900 6950
 	1    0    0    -1  
@@ -902,7 +863,7 @@ U 1 1 5C664E70
 P 3600 6950
 F 0 "C5" H 3692 6996 50  0000 L CNN
 F 1 "0.33uF" H 3692 6905 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 3600 6950 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 3600 6950 50  0001 C CNN
 F 3 "~" H 3600 6950 50  0001 C CNN
 	1    3600 6950
 	1    0    0    -1  
@@ -1008,4 +969,85 @@ Wire Wire Line
 	5900 6850 5900 6950
 Wire Wire Line
 	5900 6950 6050 6950
+Wire Wire Line
+	6650 4800 6400 4800
+$Comp
+L power:GND #PWR0110
+U 1 1 5C5AC298
+P 6300 3600
+F 0 "#PWR0110" H 6300 3350 50  0001 C CNN
+F 1 "GND" H 6305 3427 50  0000 C CNN
+F 2 "" H 6300 3600 50  0001 C CNN
+F 3 "" H 6300 3600 50  0001 C CNN
+	1    6300 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3600 6300 3550
+Wire Wire Line
+	6300 3550 6000 3550
+Wire Wire Line
+	6000 3550 6000 3800
+$Comp
+L Switch:SW_Push_Dual SW1
+U 1 1 5C5D97C0
+P 2350 2500
+F 0 "SW1" H 2350 2785 50  0000 C CNN
+F 1 "SW_Push_Dual" H 2350 2694 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx" H 2350 2700 50  0001 C CNN
+F 3 "" H 2350 2700 50  0001 C CNN
+	1    2350 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 3100 1950 3100
+Wire Wire Line
+	1950 3100 1950 3300
+Wire Wire Line
+	1950 3300 2850 3300
+Wire Wire Line
+	2150 2500 1950 2500
+Wire Wire Line
+	1950 2500 1950 3100
+Connection ~ 1950 3100
+$Comp
+L power:GND #PWR0120
+U 1 1 5C5E70E1
+P 2650 2800
+F 0 "#PWR0120" H 2650 2550 50  0001 C CNN
+F 1 "GND" H 2655 2627 50  0000 C CNN
+F 2 "" H 2650 2800 50  0001 C CNN
+F 3 "" H 2650 2800 50  0001 C CNN
+	1    2650 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2800 2650 2700
+Wire Wire Line
+	2650 2700 2550 2700
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 5C5EE9B7
+P 2200 6550
+F 0 "J1" H 2280 6542 50  0000 L CNN
+F 1 "ISP" H 2280 6451 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 2200 6550 50  0001 C CNN
+F 3 "~" H 2200 6550 50  0001 C CNN
+	1    2200 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 6350 1800 6350
+Wire Wire Line
+	1800 6050 1800 6350
+Wire Wire Line
+	1850 6450 2000 6450
+Wire Wire Line
+	1800 6850 2000 6850
+Wire Wire Line
+	1800 6850 1800 7150
+Wire Wire Line
+	4800 5300 4350 5300
+Wire Wire Line
+	4350 5400 4800 5400
 $EndSCHEMATC
