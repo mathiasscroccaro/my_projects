@@ -1,0 +1,262 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:BC548 Q1
+U 1 1 5C81CAB9
+P 5500 2850
+F 0 "Q1" H 5691 2896 50  0000 L CNN
+F 1 "BC548" H 5691 2805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5700 2775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5500 2850 50  0001 L CNN
+	1    5500 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC558 Q2
+U 1 1 5C81CBB6
+P 5500 3500
+F 0 "Q2" H 5691 3454 50  0000 L CNN
+F 1 "BC558" H 5691 3545 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5700 3425 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 5500 3500 50  0001 L CNN
+	1    5500 3500
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C81CCC9
+P 4800 3200
+F 0 "R1" V 4593 3200 50  0000 C CNN
+F 1 "R" V 4684 3200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4730 3200 50  0001 C CNN
+F 3 "~" H 4800 3200 50  0001 C CNN
+	1    4800 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 3200 5100 3200
+Wire Wire Line
+	5100 3200 5100 2850
+Wire Wire Line
+	5100 2850 5300 2850
+Wire Wire Line
+	5100 3200 5100 3500
+Wire Wire Line
+	5100 3500 5300 3500
+Connection ~ 5100 3200
+$Comp
+L Device:R R2
+U 1 1 5C81CDD3
+P 6050 3150
+F 0 "R2" V 5843 3150 50  0000 C CNN
+F 1 "R" V 5934 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 5980 3150 50  0001 C CNN
+F 3 "~" H 6050 3150 50  0001 C CNN
+	1    6050 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 3150 5600 3150
+Wire Wire Line
+	5600 3150 5600 3300
+Wire Wire Line
+	5600 3050 5600 3150
+Connection ~ 5600 3150
+$Comp
+L Transistor_FET:IRF540N Q3
+U 1 1 5C81CF67
+P 6550 3150
+F 0 "Q3" H 6755 3196 50  0000 L CNN
+F 1 "IRF540N" H 6755 3105 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6800 3075 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 6550 3150 50  0001 L CNN
+	1    6550 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3150 6350 3150
+$Comp
+L power:+12V #PWR0101
+U 1 1 5C81D1A3
+P 5600 2150
+F 0 "#PWR0101" H 5600 2000 50  0001 C CNN
+F 1 "+12V" H 5615 2323 50  0000 C CNN
+F 2 "" H 5600 2150 50  0001 C CNN
+F 3 "" H 5600 2150 50  0001 C CNN
+	1    5600 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5C81D25E
+P 5600 3850
+F 0 "#PWR0102" H 5600 3600 50  0001 C CNN
+F 1 "GND" H 5605 3677 50  0000 C CNN
+F 2 "" H 5600 3850 50  0001 C CNN
+F 3 "" H 5600 3850 50  0001 C CNN
+	1    5600 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3850 5600 3700
+Wire Wire Line
+	5600 2650 5600 2150
+$Comp
+L power:GND #PWR0103
+U 1 1 5C81D3ED
+P 6650 3850
+F 0 "#PWR0103" H 6650 3600 50  0001 C CNN
+F 1 "GND" H 6655 3677 50  0000 C CNN
+F 2 "" H 6650 3850 50  0001 C CNN
+F 3 "" H 6650 3850 50  0001 C CNN
+	1    6650 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3850 6650 3350
+$Comp
+L power:+12V #PWR0104
+U 1 1 5C81D62D
+P 6650 2150
+F 0 "#PWR0104" H 6650 2000 50  0001 C CNN
+F 1 "+12V" H 6665 2323 50  0000 C CNN
+F 2 "" H 6650 2150 50  0001 C CNN
+F 3 "" H 6650 2150 50  0001 C CNN
+	1    6650 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5C81D788
+P 6850 2600
+F 0 "J2" H 6823 2480 50  0000 R CNN
+F 1 "peltier" H 6823 2571 50  0000 R CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 6850 2600 50  0001 C CNN
+F 3 "~" H 6850 2600 50  0001 C CNN
+	1    6850 2600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6650 2950 6650 2600
+Wire Wire Line
+	6650 2500 6650 2150
+$Comp
+L power:GND #PWR0105
+U 1 1 5C81DA98
+P 4450 3850
+F 0 "#PWR0105" H 4450 3600 50  0001 C CNN
+F 1 "GND" H 4455 3677 50  0000 C CNN
+F 2 "" H 4450 3850 50  0001 C CNN
+F 3 "" H 4450 3850 50  0001 C CNN
+	1    4450 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5C81DB00
+P 4100 3200
+F 0 "J1" H 4206 3378 50  0000 C CNN
+F 1 "sinal" H 4206 3287 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4100 3200 50  0001 C CNN
+F 3 "~" H 4100 3200 50  0001 C CNN
+	1    4100 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3200 4300 3200
+Wire Wire Line
+	4300 3300 4450 3300
+Wire Wire Line
+	4450 3300 4450 3850
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5C81E37A
+P 7750 3050
+F 0 "J3" H 7722 2930 50  0000 R CNN
+F 1 "alimentacao" H 7722 3021 50  0000 R CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 7750 3050 50  0001 C CNN
+F 3 "~" H 7750 3050 50  0001 C CNN
+	1    7750 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0106
+U 1 1 5C81E3DA
+P 7500 2150
+F 0 "#PWR0106" H 7500 2000 50  0001 C CNN
+F 1 "+12V" H 7515 2323 50  0000 C CNN
+F 2 "" H 7500 2150 50  0001 C CNN
+F 3 "" H 7500 2150 50  0001 C CNN
+	1    7500 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5C81E55D
+P 7500 3900
+F 0 "#PWR0107" H 7500 3650 50  0001 C CNN
+F 1 "GND" H 7505 3727 50  0000 C CNN
+F 2 "" H 7500 3900 50  0001 C CNN
+F 3 "" H 7500 3900 50  0001 C CNN
+	1    7500 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3900 7500 3050
+Wire Wire Line
+	7500 3050 7550 3050
+Wire Wire Line
+	7550 2950 7500 2950
+Wire Wire Line
+	7500 2950 7500 2150
+$Comp
+L power:+12V #PWR0108
+U 1 1 5C81F199
+P 8500 2150
+F 0 "#PWR0108" H 8500 2000 50  0001 C CNN
+F 1 "+12V" H 8515 2323 50  0000 C CNN
+F 2 "" H 8500 2150 50  0001 C CNN
+F 3 "" H 8500 2150 50  0001 C CNN
+	1    8500 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5C81F19F
+P 8500 3900
+F 0 "#PWR0109" H 8500 3650 50  0001 C CNN
+F 1 "GND" H 8505 3727 50  0000 C CNN
+F 2 "" H 8500 3900 50  0001 C CNN
+F 3 "" H 8500 3900 50  0001 C CNN
+	1    8500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5C81F418
+P 8500 3000
+F 0 "C1" H 8615 3046 50  0000 L CNN
+F 1 "C" H 8615 2955 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 8538 2850 50  0001 C CNN
+F 3 "~" H 8500 3000 50  0001 C CNN
+	1    8500 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2850 8500 2150
+Wire Wire Line
+	8500 3150 8500 3900
+$EndSCHEMATC
